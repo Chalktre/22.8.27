@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [5, 2, 7, 3, 1, 8, 4];
+        var tmp = 0;
+        for (var times = 0; times < arr.length - 1; times++) {
+            for (var i = 0; i < arr.length - times - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    tmp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = tmp;
+                }
+            }
+        }
+        // 1 loop
+        // the worst condition is you need to do it n(n-1)/2 times.
+        console.log(arr);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
